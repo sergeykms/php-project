@@ -1,24 +1,3 @@
-<?php
-//$userid = $_GET['id'];
-//
-//$connect = require_once "core/connect.php";
-//
-//$sql = "SELECT * FROM user WHERE id = $userid";
-//$users = mysqli_query($connect, $sql);
-//
-//if (mysqli_num_rows($users) === 0) {
-//    ?>
-<!--    <div class="alert alert-danger" role="alert">-->
-<!--        User not found!-->
-<!--    </div>-->
-<!--    --><?php
-//    die();
-//}
-//
-//$user = mysqli_fetch_assoc($users);
-//
-//?>
-
 <!doctype html>
 <html lang="ru">
 <head>
@@ -30,7 +9,7 @@
 <div class="h-100 p-5 bg-light border rounded-3">
     <?php
     $userid = $_GET['id'];
-    $connect = require_once "core/connect.php";
+    $connect = require_once "../connect.php";
     $sql = "SELECT * FROM user WHERE id = $userid";
     $users = mysqli_query($connect, $sql);
     if (mysqli_num_rows($users) === 0) {
@@ -47,6 +26,9 @@
     <h2><?= $user['name'] ?></h2>
     <p><?= $user['email'] ?></p>
     <p><?= $user['age'] ?></p>
+    <a href="/" class="mt-3">
+        <button type="button" class="btn btn-primary">На главную</button>
+    </a>
 </div>
 </body>
 </html>
