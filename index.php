@@ -1,27 +1,9 @@
 <?php
 
-require_once 'Classes/Workers.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-$newWorker = [
-    [
-        'name' => 'Yan',
-        'email' => 'yan@gmail.com',
-        'age' => 25,
-        'profession' => 'Web Developer'
-    ],
-    [
-        'name' => 'Max',
-        'email' => 'max@gmail.com',
-        'age' => 26,
-        'profession' => 'Web Designer'
-    ]
-];
+use App\Figures\Rectangle;
 
-Workers::create($newWorker);
-Workers::save();
+$rect = new Rectangle(10, 20);
+echo($rect->square());
 
-?>
-
-<pre>
-    <?php print_r(Workers::all()); ?>
-</pre>

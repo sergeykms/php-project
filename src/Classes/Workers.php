@@ -1,8 +1,9 @@
 <?php
+namespace App\Classes;
 
 class Workers
 {
-    private static array $workers = [];
+    protected static array $workers = [];
 
     public static function create(array $worker): array
     {

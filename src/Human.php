@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes\Human;
+namespace src\Classes;
 class Human
 {
     private string $name;

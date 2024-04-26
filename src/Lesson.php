@@ -1,5 +1,6 @@
 <?php
 
+namespace src\Classes;
 class Lesson
 {
     private string $title;
